@@ -292,7 +292,52 @@ body {
 /* My CSS for PRINT VERSION */
 
 @media print {
-   body {
-       background-color: green;
-   }
+    nav {
+        display: none;
+    }
+
+    .tm-section-title {
+        color: blue!important;
+    }
+
+    .tm-main-content {
+        margin-left: 0;
+    }
+
+    .tm-content-box {
+        margin-bottom: 0;
+    }
+
+    .flex-2-col {
+        display: block;
+    }
+
+    .tm-section-description {
+        width: 550px;
+    }
+
+    .tm-content-box .flex-item {
+        margin: 0 auto;
+    }
+
+    .pad {
+        margin-top: 0;
+    }
+
+    .flex-item img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .flex-item img :after {
+        content: 'Copyright &copy; 2016 Company Name  - Design:'
+    }
+
+    #about {
+        margin-top: 60px;
+    }
+
+    .tm-banner-inner {
+        height: 70%;
+    }
 }
