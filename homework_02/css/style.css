@@ -346,113 +346,191 @@ body {
     }
 }
 
-.box::before {
+@media screen {
+    .box::before {
 
+    }
+
+    /* 12 TASK */
+    input[type="text"], [type="email"] {
+        color: red;
+    }
+
+    button[type="submit"] {
+        color: red;
+    }
+
+    /* 11 TASK */
+    /* CASE WITH NOT LAST CHILD */
+    .tm-nav-item:not(:last-child)::after {
+        display: block;
+        margin-top: 12px;
+        content: '';
+        border: 1px solid #999;
+    }
+
+    /* SECOND CASE */
+    /*.tm-main-nav li:last-child::after {*/
+    /*border: 0;*/
+    /*}*/
+    /* 10 TASK */
+    .box-bg:nth-child(odd) {
+        background: #ececec;
+    }
+
+    .boxes p:first-letter {
+        font-style: italic;
+        font-size: 25px;
+        color: #000 !important;
+    }
+
+    .boxes p {
+        white-space: normal;
+    }
+
+    .box {
+        width: 185px;
+    }
+
+    /* 6 TASK */
+    .carousel-content .tm-section-title {
+        color: gainsboro;
+        letter-spacing: 5px;
+    }
+
+    /* 7 TASK */
+    h2 ~ p:first-of-type {
+        font-style: italic;
+    }
+
+    /* 5 TASK */
+    .gallery-container a > img {
+        border: 2px silver;
+    }
+
+    /* 3 TASK */
+    p:first-letter {
+        color: #76cdd7;
+        font-size: 30px;
+    }
+
+    /* 4 TASK */
+    nav, section, .container {
+        box-shadow: 0 0 13px rgb(112, 112, 112);
+    }
+
+    /* 8 TASK */
+    section .tm-content-box p {
+        text-indent: 25px;
+    }
+
+    .tm-section-description {
+        line-height: 30px;
+    }
+
+    /* 9 TASK */
+    .heading h2 {
+        text-align: center;
+        color: #2ecbf5;
+    }
+
+    .heading a {
+        color: #000;
+    }
+
+    .heading .text::after {
+        content: "New";
+        vertical-align: top;
+        font-size: 10px;
+        color: red;
+    }
+
+    .heading a:hover {
+        color: #5bc0de;
+    }
+
+    .heading a:visited {
+        color: silver;
+    }
 }
 
-/* 12 TASK */
-input[type="text"], [type="email"] {
-    color: red;
+/* EXTRA TASK */
+/* Можна в ідеалі в js файлі поставити он скрол івент який буде
+   міняти цей сайдбар на fixed, або просто поставити готовий
+   плагін з npm який обзервить висоту при скролі. Не ясно
+   чи ставити and media(max-height: 835px), бо в таску пише
+   "АБО" тому розбив на 2. */
+@media(max-width: 1140px) {
+   .tm-sidebar {
+       top: 0;
+       position: -webkit-sticky;
+       position: sticky;
+       display: block;
+       width: 1140px;
+       text-align: center;
+   }
+
+    .tm-main-nav  {
+        height: 50px;
+        margin-bottom: 20px;
+        padding-top: 5px;
+    }
+
+    .tm-nav-item {
+        float: left;
+        display: block;
+        width: 100px;
+        margin-left: 150px;
+        padding: 0;
+    }
+
+    .tm-nav-item::after {
+        border: 0 !important;
+    }
+
+    .tm-nav-item a {
+        margin-bottom: 20px
+    }
+
+    .tm-nav-item-link {
+        padding: 0;
+    }
 }
 
-button[type="submit"] {
-    color: red;
-}
+@media(max-height: 835px) {
+    .tm-sidebar {
+        top: 0;
+        position: -webkit-sticky;
+        position: sticky;
+        display: block;
+        width: 1140px;
+        text-align: center;
+    }
 
-/* 11 TASK */
-/* CASE WITH NOT LAST CHILD */
-.tm-nav-item:not(:last-child)::after {
-    display: block;
-    margin-top: 12px;
-    content: '';
-    border: 1px solid #999;
-}
+    .tm-main-nav  {
+        height: 50px;
+        margin-bottom: 20px;
+        padding-top: 5px;
+    }
 
-/* SECOND CASE */
-/*.tm-main-nav li:last-child::after {*/
-/*border: 0;*/
-/*}*/
+    .tm-nav-item {
+        float: left;
+        display: block;
+        width: 100px;
+        margin-left: 150px;
+        padding: 0;
+    }
 
-/* 10 TASK */
+    .tm-nav-item::after {
+        border: 0 !important;
+    }
 
-.box-bg:nth-child(odd) {
-    background: #ececec;
-}
+    .tm-nav-item a {
+        margin-bottom: 20px
+    }
 
-.boxes p:first-letter {
-    font-style: italic;
-    font-size: 25px;
-    color: #000 !important;
-}
-
-.boxes p {
-    white-space: normal;
-}
-
-.box {
-    width: 185px;
-}
-
-/* 6 TASK */
-.carousel-content .tm-section-title {
-    color: gainsboro;
-    letter-spacing: 5px;
-}
-
-/* 7 TASK */
-h2 ~ p:first-of-type {
-    font-style: italic;
-}
-
-/* 5 TASK */
-.gallery-container a > img {
-    border: 2px silver;
-}
-
-/* 3 TASK */
-p:first-letter {
-    color: #76cdd7;
-    font-size: 30px;
-}
-
-/* 4 TASK */
-nav, section, .container {
-    box-shadow: 0 0 13px rgb(112, 112, 112);
-}
-
-/* 8 TASK */
-
-section .tm-content-box p {
-    text-indent: 25px;
-}
-
-.tm-section-description {
-    line-height: 30px;
-}
-
-/* 9 TASK */
-
-.heading h2 {
-    text-align: center;
-    color: #2ecbf5;
-}
-
-.heading a {
-    color: #000;
-}
-
-.heading .text::after {
-    content: "New";
-    vertical-align: top;
-    font-size: 10px;
-    color: red;
-}
-
-.heading a:hover {
-    color: #5bc0de;
-}
-
-.heading a:visited {
-    color: silver;
+    .tm-nav-item-link {
+        padding: 0;
+    }
 }
 
