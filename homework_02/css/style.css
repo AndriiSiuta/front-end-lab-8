@@ -297,7 +297,7 @@ body {
     }
 
     .tm-section-title {
-        color: blue!important;
+        color: blue !important;
     }
 
     .tm-main-content {
@@ -322,6 +322,7 @@ body {
 
     .pad {
         margin-top: 0;
+        padding: 0;
     }
 
     .flex-item img {
@@ -329,15 +330,91 @@ body {
         margin: 0 auto;
     }
 
-    .flex-item img :after {
-        content: 'Copyright &copy; 2016 Company Name  - Design:'
+    /*.flex-item img :after {*/
+    /*content: 'Copyright &copy; 2016 Company Name  - Design:'*/
+    /*}*/
+    /*#about {*/
+    /*margin-top: 60px;*/
+    /*}*/
+    #about, .heading, .blocks, #ideas, .img-fluid, #contact {
+        display: none;
     }
 
-    #about {
-        margin-top: 60px;
+    .tm-banner {
+        height: 200px;
+        margin-bottom: 0;
     }
+}
 
-    .tm-banner-inner {
-        height: 70%;
-    }
+.box::before {
+
+}
+
+/* 12 TASK */
+input[type="text"], [type="email"] {
+    color: red;
+}
+
+button[type="submit"] {
+    color: red;
+}
+
+/* 11 TASK */
+/* CASE WITH NOT LAST CHILD */
+.tm-nav-item:not(:last-child)::after {
+    display: block;
+    margin-top: 12px;
+    content: '';
+    border: 1px solid #999;
+}
+
+/* SECOND CASE */
+/*.tm-main-nav li:last-child::after {*/
+/*border: 0;*/
+/*}*/
+
+/* 10 TASK */
+
+.box-bg:nth-child(odd) {
+    background: #ececec;
+}
+
+.boxes p:first-letter {
+    font-style: italic;
+    font-size: 25px;
+    color: #000 !important;
+}
+
+.boxes p {
+    white-space: normal;
+}
+
+.box {
+    width: 185px;
+}
+
+/* 6 TASK */
+.carousel-content .tm-section-title {
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+
+/* 7 TASK */
+h2 ~ p:first-of-type {
+    font-style: italic;
+}
+
+/* 5 TASK */
+.gallery-container a > img {
+    border: 2px silver;
+}
+
+/* 3 TASK */
+p:first-letter {
+    color: #76cdd7;
+    font-size: 30px;
+}
+
+nav section .container {
+    box-shadow: 0 0 15px rgb(96,96,96);
 }
