@@ -290,7 +290,7 @@ body {
 }
 
 /* My CSS for PRINT VERSION */
-
+/* 1 TASK */
 @media print {
     nav {
         display: none;
@@ -415,6 +415,44 @@ p:first-letter {
     font-size: 30px;
 }
 
-nav section .container {
-    box-shadow: 0 0 15px rgb(96,96,96);
+/* 4 TASK */
+nav, section, .container {
+    box-shadow: 0 0 13px rgb(112, 112, 112);
 }
+
+/* 8 TASK */
+
+section .tm-content-box p {
+    text-indent: 25px;
+}
+
+.tm-section-description {
+    line-height: 30px;
+}
+
+/* 9 TASK */
+
+.heading h2 {
+    text-align: center;
+    color: #2ecbf5;
+}
+
+.heading a {
+    color: #000;
+}
+
+.heading .text::after {
+    content: "New";
+    vertical-align: top;
+    font-size: 10px;
+    color: red;
+}
+
+.heading a:hover {
+    color: #5bc0de;
+}
+
+.heading a:visited {
+    color: silver;
+}
+
