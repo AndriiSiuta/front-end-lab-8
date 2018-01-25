@@ -373,6 +373,7 @@ body {
     /*.tm-main-nav li:last-child::after {*/
     /*border: 0;*/
     /*}*/
+
     /* 10 TASK */
     .box-bg:nth-child(odd) {
         background: #ececec;
@@ -532,5 +533,18 @@ body {
     .tm-nav-item-link {
         padding: 0;
     }
+}
+
+/* TASK 2 */
+
+#about li .box {
+    border-top: 0 !important;
+    border-left: 0 !important;
+}
+#about li .box:nth-child(3n) {
+    border-left: 1px solid silver !important;
+}
+#about li .box:nth-child(-n+3) {
+    border-top: 1px solid silver !important;
 }
 
