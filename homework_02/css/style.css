@@ -347,66 +347,18 @@ body {
 }
 
 @media screen {
-    .box::before {
-
+    /* 2 TASK */
+    #about li .box {
+        border-top: 0 !important;
+        border-left: 0 !important;
     }
 
-    /* 12 TASK */
-    input[type="text"], [type="email"] {
-        color: red;
+    #about li .box:nth-child(3n) {
+        border-left: 1px solid silver !important;
     }
 
-    button[type="submit"] {
-        color: red;
-    }
-
-    /* 11 TASK */
-    /* CASE WITH NOT LAST CHILD */
-    .tm-nav-item:not(:last-child)::after {
-        display: block;
-        margin-top: 12px;
-        content: '';
-        border: 1px solid #999;
-    }
-
-    /* SECOND CASE */
-    /*.tm-main-nav li:last-child::after {*/
-    /*border: 0;*/
-    /*}*/
-
-    /* 10 TASK */
-    .box-bg:nth-child(odd) {
-        background: #ececec;
-    }
-
-    .boxes p:first-letter {
-        font-style: italic;
-        font-size: 25px;
-        color: #000 !important;
-    }
-
-    .boxes p {
-        white-space: normal;
-    }
-
-    .box {
-        width: 185px;
-    }
-
-    /* 6 TASK */
-    .carousel-content .tm-section-title {
-        color: gainsboro;
-        letter-spacing: 5px;
-    }
-
-    /* 7 TASK */
-    h2 ~ p:first-of-type {
-        font-style: italic;
-    }
-
-    /* 5 TASK */
-    .gallery-container a > img {
-        border: 2px silver;
+    #about li .box:nth-child(-n+3) {
+        border-top: 1px solid silver !important;
     }
 
     /* 3 TASK */
@@ -418,6 +370,22 @@ body {
     /* 4 TASK */
     nav, section, .container {
         box-shadow: 0 0 13px rgb(112, 112, 112);
+    }
+
+    /* 5 TASK */
+    .gallery-container a > img {
+        border: 2px silver;
+    }
+
+    /* 6 TASK */
+    .carousel-content .tm-section-title {
+        color: gainsboro;
+        letter-spacing: 5px;
+    }
+
+    /* 7 TASK */
+    h2 ~ p:first-of-type {
+        font-style: italic;
     }
 
     /* 8 TASK */
@@ -453,6 +421,47 @@ body {
     .heading a:visited {
         color: silver;
     }
+
+    /* 10 TASK */
+    .box-bg:nth-child(odd) {
+        background: #ececec;
+    }
+
+    .boxes p:first-letter {
+        font-style: italic;
+        font-size: 25px;
+        color: #000 !important;
+    }
+
+    .boxes p {
+        white-space: normal;
+    }
+
+    .box {
+        width: 185px;
+    }
+
+    /* 11 TASK */
+    /* CASE WITH NOT LAST CHILD */
+    .tm-nav-item:not(:last-child)::after {
+        display: block;
+        margin-top: 12px;
+        content: '';
+        border: 1px solid #999;
+    }
+
+    /* SECOND CASE */
+    /*.tm-main-nav li:last-child::after {*/
+    /*border: 0;*/
+    /*}*/
+    /* 12 TASK */
+    input[type="text"], [type="email"] {
+        color: red;
+    }
+
+    button[type="submit"] {
+        color: red;
+    }
 }
 
 /* EXTRA TASK */
@@ -461,54 +470,16 @@ body {
    плагін з npm який обзервить висоту при скролі. Не ясно
    чи ставити and media(max-height: 835px), бо в таску пише
    "АБО" тому розбив на 2. */
-@media(max-width: 1140px) {
-   .tm-sidebar {
-       top: 0;
-       position: -webkit-sticky;
-       position: sticky;
-       display: block;
-       width: 1140px;
-       text-align: center;
-   }
-
-    .tm-main-nav  {
-        height: 50px;
-        margin-bottom: 20px;
-        padding-top: 5px;
-    }
-
-    .tm-nav-item {
-        float: left;
-        display: block;
-        width: 100px;
-        margin-left: 150px;
-        padding: 0;
-    }
-
-    .tm-nav-item::after {
-        border: 0 !important;
-    }
-
-    .tm-nav-item a {
-        margin-bottom: 20px
-    }
-
-    .tm-nav-item-link {
-        padding: 0;
-    }
-}
-
-@media(max-height: 835px) {
+@media (max-width: 1140px) {
     .tm-sidebar {
         top: 0;
-        position: -webkit-sticky;
         position: sticky;
         display: block;
         width: 1140px;
         text-align: center;
     }
 
-    .tm-main-nav  {
+    .tm-main-nav {
         height: 50px;
         margin-bottom: 20px;
         padding-top: 5px;
@@ -535,16 +506,38 @@ body {
     }
 }
 
-/* TASK 2 */
+@media (max-height: 835px) {
+    .tm-sidebar {
+        top: 0;
+        position: sticky;
+        display: block;
+        width: 1140px;
+        text-align: center;
+    }
 
-#about li .box {
-    border-top: 0 !important;
-    border-left: 0 !important;
-}
-#about li .box:nth-child(3n) {
-    border-left: 1px solid silver !important;
-}
-#about li .box:nth-child(-n+3) {
-    border-top: 1px solid silver !important;
-}
+    .tm-main-nav {
+        height: 50px;
+        margin-bottom: 20px;
+        padding-top: 5px;
+    }
 
+    .tm-nav-item {
+        float: left;
+        display: block;
+        width: 100px;
+        margin-left: 150px;
+        padding: 0;
+    }
+
+    .tm-nav-item::after {
+        border: 0 !important;
+    }
+
+    .tm-nav-item a {
+        margin-bottom: 20px
+    }
+
+    .tm-nav-item-link {
+        padding: 0;
+    }
+}
