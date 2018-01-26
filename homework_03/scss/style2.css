@@ -1,21 +1,21 @@
 body {
-  background: #dcbb9a;
+  background: rgba(198, 238, 252, 0.53);
   margin: 0;
   padding: 0; }
 
 #content {
   margin: 0 auto;
   width: 960px;
-  background: #fff;
+  background: #fff178;
   padding: 16px; }
   #content h1 {
     text-align: center;
-    color: #893c00; }
+    color: #3b3b3b; }
   #content h2 {
-    color: #893c00; }
+    color: #3b3b3b; }
   #content img {
     padding: 1px;
-    border: 3px solid #893c00; }
+    border: 3px solid #3b3b3b; }
   #content .img-left {
     float: left;
     margin-right: 18.75px;
@@ -27,8 +27,8 @@ body {
     float: left;
     width: 385px;
     height: 70px;
-    background-color: #fadcba;
+    background-color: #fccd10;
     padding: 20px 15px 10px 15px;
     margin-right: 15px; }
 
-/*# sourceMappingURL=style1.css.map */
+/*# sourceMappingURL=style2.css.map */
