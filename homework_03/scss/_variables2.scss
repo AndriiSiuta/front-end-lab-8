@@ -1,11 +1,25 @@
-$backgroundColor: rgba(198, 238, 252, 0.53);  ;
-$contentBackground: #fff178;
-$headingText: #3b3b3b;
-$briefBackground: #fccd10;
-$briefWidth: 300px;
-$briefHeight: 100px;
+//general
+$bodyBackground: rgba(198, 238, 252, 0.53);
+$headingText: #fccd10;
+$contentBackground: #3b3b3b;
+
+//brief
+$briefBackground: #fff178;
+$briefWidth : 960px;
+$briefHeight: 18.4px;
+$briefPadding: 0;
+$briefMargin: true;
+
+//other
+$linkColor: darken($headingText, 15%);
+
+//table
 $tableHead: #94a34e;
 $tableColor: #677d01;
 
+
 //form
 $formColors: #f5c70f;
+$formWidth: 960px;
+$rowWidth: 960px/2;
+$buttonBackground: $contentBackground;

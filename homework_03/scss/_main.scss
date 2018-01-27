@@ -1,12 +1,17 @@
-@mixin briefView($briefWidth, $briefHeight, $briefBackground) {
+@mixin briefView($briefWidth, $briefHeight, $briefBackground, $briefPadding) {
   float: left;
   width: $briefWidth;
   height: $briefHeight;
   background-color: $briefBackground;
+  padding: $briefPadding;
+}
+
+@mixin tableView() {
+
 }
 
 body {
-  background: $backgroundColor;
+  background: $bodyBackground;
   margin: 0;
   padding: 0;
 }
@@ -39,12 +44,132 @@ body {
 
   .img-right {
     float: right;
-    margin-left: 10px;
+    margin-left: 15px;
   }
 
   .brief {
-    @include briefView(385px, 70px, $briefBackground);
-    padding: 20px 15px 10px 15px;
-    margin-right: 15px;
+    @include briefView($briefWidth, $briefHeight, $briefBackground, $briefPadding);
+    @if $briefMargin {
+      margin-bottom: 40px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      text-indent: 20px;
+    } @else {
+      margin-right: 30px;
+    }
+  }
+
+  a {
+    color: $linkColor;
+  }
+
+  table {
+    width: 100%;
+    margin-left: 10px;
+    background: $tableColor;
+    border-collapse: collapse;
+    caption {
+      text-align: right;
+      color: #000;
+    }
+    th {
+      padding: 10px 20px;
+      background-color: $tableHead;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 10px 20px;
+    }
+
+    tr {
+      text-align: left;
+      border-bottom: 1px solid $tableHead;
+      &:first-child {
+        border: none;
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+    input[type=text], select, textarea {
+      display: block;
+      border: 1px solid $tableHead;
+      box-sizing: border-box;
+      margin-bottom: 7px;
+      padding: 3px;
+    }
+
+    .main-form--row1 {
+      width: $rowWidth;
+      height: 50px;
+      float: left;
+      margin-bottom: 3px;
+    }
+
+    .main-form--row2 {
+      width: $rowWidth;
+      height: 50px;
+      float: left;
+      margin-bottom: 3px;
+    }
+
+    label {
+      display: inline-block;
+      color: lighten($formColors, 10%);
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .main-form__name {
+      float: left;
+      width: 100%;
+
+    }
+
+    .main-form--label__surname {
+      &.mg-left {
+        margin-left: 3px;
+      }
+    }
+
+    .main-form__surname {
+      float: left;
+      width: 477px;
+      &.mg-left {
+        margin-left: 3px;
+      }
+    }
+
+    .main-form__email {
+      width: 100%;
+    }
+
+    .main-form__mark {
+      width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+      height: 162px;
+      margin-bottom: 25px;
+    }
+
+    .sent-button {
+      background: $buttonBackground;
+      color: lighten($linkColor, 20%);
+      display: block;
+      width: 240px;
+      padding: 13px 0;
+      border: 1.2px solid lighten($linkColor, 5%);
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 18px;
+      cursor: pointer;
+      font-family: Arial;
+    }
   }
 }

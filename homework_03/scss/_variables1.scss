@@ -1,11 +1,24 @@
-$backgroundColor: #dcbb9a;
+//general
+$bodyBackground: #dcbb9a;
 $contentBackground: #fff;
 $headingText: #893c00;
+
+//brief
 $briefBackground: #fadcba;
-$briefWidth: 300px;
-$briefHeight: 100px;
+$briefWidth: 385px;
+$briefHeight: 70px;
+$briefPadding: 20px 15px 10px 15px;
+$briefMargin: false;
+
+//other
 $linkColor: #3d70a1;
+
+//table
 $tableHead: #e0e0e0;
+$tableColor: #fff;
 
 //form
 $formColors: #808080;
+$formWidth: 960px;
+$rowWidth: 960px/2;
+$buttonBackground: #fff;
