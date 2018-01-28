@@ -1,3 +1,4 @@
+// Mixin for content
 @mixin contentView($headingText) {
   h1 {
     text-align: center;
@@ -14,6 +15,7 @@
   }
 }
 
+// Mixin for brief
 @mixin briefView($briefWidth, $briefHeight, $briefBackground, $briefPadding) {
   float: left;
   width: $briefWidth;
@@ -22,6 +24,7 @@
   padding: $briefPadding;
 }
 
+// Mixin for table
 @mixin tableView($tableColor, $tableHead) {
   background: $tableColor;
   th {
@@ -33,6 +36,7 @@
   }
 }
 
+// Mixin for form inputs
 @mixin formInputsStyle($rowWidth, $borderColorInput) {
   input[type=text], select, textarea {
     display: block;
@@ -84,6 +88,7 @@
   }
 }
 
+// Mixin for button sent
 @mixin buttonView($textColorButton, $borderColor) {
   color: $textColorButton;
   border: 1.2px solid $borderColor;
