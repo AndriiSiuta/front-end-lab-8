@@ -148,7 +148,7 @@ body {
       padding: 10px 20px;
       font-weight: normal;
       text-transform: uppercase;
-        &:nth-child(-n+2) {
+      &:nth-child(-n+2) {
         border-right: 1px solid #fff;
       }
     }
