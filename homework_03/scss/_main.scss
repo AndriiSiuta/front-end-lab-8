@@ -1,3 +1,19 @@
+@mixin contentView($headingText) {
+  h1 {
+    text-align: center;
+    color: $headingText;
+  }
+
+  h2 {
+    color: $headingText;
+  }
+
+  img {
+    padding: 1px;
+    border: 3px solid $headingText;
+  }
+}
+
 @mixin briefView($briefWidth, $briefHeight, $briefBackground, $briefPadding) {
   float: left;
   width: $briefWidth;
@@ -71,22 +87,6 @@
 @mixin buttonView($textColorButton, $borderColor) {
   color: $textColorButton;
   border: 1.2px solid $borderColor;
-}
-
-@mixin contentView($headingText) {
-  h1 {
-    text-align: center;
-    color: $headingText;
-  }
-
-  h2 {
-    color: $headingText;
-  }
-
-  img {
-    padding: 1px;
-    border: 3px solid $headingText;
-  }
 }
 
 body {
