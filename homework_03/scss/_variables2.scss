@@ -17,9 +17,14 @@ $linkColor: darken($headingText, 15%);
 $tableHead: #94a34e;
 $tableColor: #677d01;
 
-
 //form
 $formColors: #f5c70f;
 $formWidth: 960px;
-$rowWidth: 960px/2;
+$formBorder: $tableHead;
+$rowWidth: $formWidth/2;
+$borderColorInput: $tableHead;
+
+//button
+$textColorButton: #e39638;
+$borderColor: #f5c70f;
 $buttonBackground: $contentBackground;

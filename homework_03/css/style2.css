@@ -8,6 +8,13 @@ body {
   width: 960px;
   background: #3b3b3b;
   padding: 16px; }
+  #content .img-left {
+    float: left;
+    margin-right: 18.75px;
+    margin-bottom: 7px; }
+  #content .img-right {
+    float: right;
+    margin-left: 15px; }
   #content h1 {
     text-align: center;
     color: #fccd10; }
@@ -16,13 +23,6 @@ body {
   #content img {
     padding: 1px;
     border: 3px solid #fccd10; }
-  #content .img-left {
-    float: left;
-    margin-right: 18.75px;
-    margin-bottom: 7px; }
-  #content .img-right {
-    float: right;
-    margin-left: 15px; }
   #content .brief {
     float: left;
     width: 960px;
@@ -36,23 +36,25 @@ body {
   #content a {
     color: #bd9802; }
   #content table {
+    background: #677d01;
     width: 100%;
     margin-left: 10px;
-    background: #677d01;
     border-collapse: collapse; }
+    #content table th {
+      background-color: #94a34e; }
+    #content table tr {
+      border-bottom: 1px solid #94a34e; }
     #content table caption {
       text-align: right;
       color: #000; }
     #content table th {
       padding: 10px 20px;
-      background-color: #94a34e;
       font-weight: normal;
       text-transform: uppercase; }
     #content table td {
       padding: 10px 20px; }
     #content table tr {
-      text-align: left;
-      border-bottom: 1px solid #94a34e; }
+      text-align: left; }
       #content table tr:first-child {
         border: none; }
   #content form {
@@ -73,11 +75,6 @@ body {
       height: 50px;
       float: left;
       margin-bottom: 3px; }
-    #content form label {
-      display: inline-block;
-      color: #f7d240;
-      text-transform: uppercase;
-      margin-bottom: 3px; }
     #content form .main-form__name {
       float: left;
       width: 100%; }
@@ -92,17 +89,22 @@ body {
       width: 100%; }
     #content form .main-form__mark {
       width: 100%; }
+    #content form label {
+      display: inline-block;
+      color: #f7d240;
+      text-transform: uppercase;
+      margin-bottom: 3px; }
     #content form textarea {
       width: 100%;
       height: 162px;
       margin-bottom: 25px; }
     #content form .sent-button {
+      color: #e39638;
+      border: 1.2px solid #f5c70f;
       background: #3b3b3b;
-      color: #fcd229;
       display: block;
       width: 240px;
       padding: 13px 0;
-      border: 1.2px solid #d6ac03;
       text-align: center;
       text-decoration: none;
       text-transform: uppercase;
