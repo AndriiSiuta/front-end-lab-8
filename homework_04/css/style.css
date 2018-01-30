@@ -1,0 +1,114 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "myFont";
+}
+
+@font-face {
+    font-family: "myFont";
+    src: url('http://fonts.googleapis.com/css?family=Open+Sans')
+}
+
+div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.heading {
+
+}
+
+header {
+    width: 100%;
+    height: 740px;
+    background: url(../img/apples.jpg) no-repeat center / cover;
+}
+
+.clearfix {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+}
+
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header__title {
+    margin-top: 45px;
+    font-size: 18px;
+    float: left;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.header-menu {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav {
+    float: right;
+    margin-top: 45px;
+    margin-right: 90px;
+}
+
+.header-menu li {
+    display: block;
+    float: right;
+    list-style: none;
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 55px;
+    font-size: 18px;
+}
+
+.__titles {
+    margin-top: 255px;
+}
+
+.__titles h2 {
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.__titles h2:after {
+    content: 'TM';
+    vertical-align: top;
+    font-size: 18px;
+    color: #fff;
+}
+
+.__titles-second {
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.__header-button {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 3px;
+    text-align: center;
+    width: 230px;
+    height: 40px;
+    border: 2px solid #fff;
+    padding: 20px 0 0;
+    background-color: #343638;
+    margin: 170px auto 0;
+}
