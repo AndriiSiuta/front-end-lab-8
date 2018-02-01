@@ -17,7 +17,6 @@ div {
 }
 
 header {
-    position: absolute;
     width: 100%;
     height: 740px;
     background: url(../img/apples.jpg) no-repeat center / cover;
@@ -234,3 +233,92 @@ a:hover {
 }
 
 
+.height-4 {
+    height: 440px;
+    background-color: #fff;
+    margin-top: 145px;
+}
+
+.flex-container-1 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    color: #b6b6b6;
+    flex-direction: row;
+}
+
+.flex-heading {
+    flex-basis: 250px;
+    justify-content: flex-start;
+    color: #000!important;
+    font-size: 20px!important;
+}
+
+.flex-heading:nth-last-child(1), .flex-item-4 {
+    flex: 4;
+    order: 4;
+}
+
+.flex-heading:nth-child(1) {
+    margin-bottom: 30px;
+}
+
+.flex-heading:nth-child(2) {
+}
+
+/*.flex-heading:nth-child(3) {*/
+    /*margin-left: 47px;*/
+/*}*/
+
+.flex-item-1, .flex-item-2, .flex-item-3, .flex-item-4 {
+    flex-wrap: wrap;
+    flex-basis: 230px;
+    font-size: 15px;
+}
+
+.flex-item-2, .flex-item-3, .flex-item-4 {
+    margin-left: 47px;
+}
+
+.flex-item-3 p {
+    color: #dbdbdb;
+}
+
+.email-letter {
+    margin-top: 32px;
+    background-color: #f3f3f3;
+    border: 1px solid #343638;
+    padding: 15px;
+    width: 170px;
+    float: left;
+}
+
+.button-letter {
+    padding: 15px 15px 17px 15px;
+    background-color: #343638;
+    border: none;
+    color: #fff;
+    float: left;
+    width: 100px;
+    margin-top: 32px;
+}
+
+footer nav {
+    display: block;
+    float: right;
+}
+
+footer nav li {
+    color: #000000;
+    list-style: none;
+    float: right;
+    margin-right: 46px;
+}
+
+footer span {
+    color: #b1b1b1;
+}
+
+footer {
+    height: 80px;
+}
