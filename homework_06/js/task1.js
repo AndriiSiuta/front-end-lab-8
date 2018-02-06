@@ -52,7 +52,9 @@ function square(kindTriangle) {
                         : '';
         case 'Scalene':
             const p = (a + b + c) / 2;
-            console.log(`Type of triangle is ${kindTriangle} triangle and square is ${Math.sqrt(p * (p - a) * (p - b) * (p - c))}`);
+            square = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+            square = Number.isInteger(square) ? square : square.toFixed(2);
+            console.log(`Type of triangle is ${kindTriangle} triangle and square is ${square}`);
             break;
     }
 }
