@@ -6,9 +6,9 @@ for (let i = 0; i < 3; i++) {
 [a, b, c] = sides;
 
 /*
-* @param {Number} a
-* @param {Number} b
-* @param {Number} c
+* @param {Number} a - firstSide
+* @param {Number} b - secondSide
+* @param {Number} c - thirdSide
 * @return {String} log of result
 */
 function checkTriangle(a, b, c) {
@@ -28,6 +28,10 @@ function checkTriangle(a, b, c) {
     }
 }
 
+/*
+* @param {String} type of triangle from upper func
+* @return {String} log of result square and type
+*/
 function square(kindTriangle) {
     let square;
     switch (kindTriangle) {
