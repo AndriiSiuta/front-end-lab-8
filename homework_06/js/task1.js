@@ -9,7 +9,7 @@ for (let i = 0; i < 3; i++) {
 * @param {Number} a
 * @param {Number} b
 * @param {Number} c
-* return {String} log of result
+* @return {String} log of result
 * */
 function checkTriangle(a, b, c) {
     if (a <= 0 || b <= 0 || c <= 0) return 'Incorrect Data';
