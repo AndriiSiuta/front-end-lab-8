@@ -36,7 +36,8 @@ function square(kindTriangle) {
     let halfOfPerimetr = (a + b + c) / 2;
     square = Math.sqrt(halfOfPerimetr * (halfOfPerimetr - a) * (halfOfPerimetr - b) * (halfOfPerimetr - c));
     square = Number.isInteger(square) ? square : square.toFixed(2);
-    console.log(`Type of triangle is ${kindTriangle} triangle and square is ${square}`);
+    if(square === 0 || Number.isNaN(square)) console.log('Incorrect data');
+    else console.log(`Type of triangle is ${kindTriangle} triangle and square is ${square}`);
 }
 
 checkTriangle(a, b, c);
