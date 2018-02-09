@@ -17,9 +17,7 @@ continueGame = (startPrize, startPrizes, attempts, limit) => {
 };
 
 class User {
-    constructor() {
-
-    }
+    constructor() {}
     setNewPrize(prize) {
         this.userPrize = prize;
     }
@@ -27,16 +25,14 @@ class User {
         return this.userPrize;
     }
     getUserChoice(limit) {
-        return this.userChoice = +prompt(`Choose number in range [0, ${limit - 1}]`)
+        return +prompt(`Choose number in range [0, ${limit - 1}]`)
     }
 }
 
 class GameController {
-    constructor(prizes, attempts, limit, winNumber) {
+    constructor(prizes, limit) {
         this.prizes = prizes;
-        this.attempts = attempts;
         this.limit = limit;
-        this.winNumber = winNumber;
     }
     setNewPrizes(multiplier) {
         this.prizes.forEach((prize) => prize * multiplier);
@@ -45,10 +41,10 @@ class GameController {
         return this.prizes[i];
     }
     resetAttempts() {
-        return this.attempts = 3;
+        return 3;
     }
     generateWinNumber() {
-        return this.winNumber = Math.floor(Math.random() * this.limit);
+        return Math.floor(Math.random() * this.limit);
     }
     setNewLimit(limit) {
         this.limit = limit * 2;
@@ -62,19 +58,20 @@ class GameController {
     }
 }
 
-startGame = (startPrize = 0, startPrizes = [10, 5, 2], attempts = 3, limit = 6) => {
-    let User = new User();
+
+function startGame (startPrize = 0, startPrizes = [10, 5, 2], attempts = 3, limit = 6) {
+    let userProfile = new User();
     let Game = new GameController(startPrizes, attempts);
     let winNumber = Game.generateWinNumber();
+    console.log(winNumber);
 
-    for(let i = Game.resetAttempts(); i > 0; i++) {
-        if(User.getUserChoice(Game.getLimit()) === winNumber && i > 0) {
-            User.setNewPrize(Game.getNewPrizes(i));
-            continueGame(User.getPrize(), Game.setNewPrizes(3), Game.resetAttempts(),
+    for(let i = 3; i > 0; i++) {
+        if(userProfile.getUserChoice(Game.getLimit()) === winNumber && i > 0) {
+            userProfile.setNewPrize(Game.getNewPrizes(i));
+            continueGame(userProfile.getPrize(), Game.setNewPrizes(3), Game.resetAttempts(),
                 Game.setNewLimit(limit));
-
         } else {
-            Game.tryAgain(User.getPrize());
+            Game.tryAgain(userProfile.getPrize());
         }
     }
 };
