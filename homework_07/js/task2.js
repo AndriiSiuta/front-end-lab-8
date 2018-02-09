@@ -17,7 +17,9 @@ continueGame = (startPrize, startPrizes, attempts, limit) => {
 };
 
 class User {
-    constructor() {}
+    constructor() {
+
+    }
     setNewPrize(prize) {
         this.userPrize = prize;
     }
@@ -61,7 +63,7 @@ class GameController {
 }
 
 startGame = (startPrize = 0, startPrizes = [10, 5, 2], attempts = 3, limit = 6) => {
-    let User = new User(startPrize);
+    let User = new User();
     let Game = new GameController(startPrizes, attempts);
     let winNumber = Game.generateWinNumber();
 
