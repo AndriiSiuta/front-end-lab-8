@@ -1,14 +1,16 @@
-callToStart = () => {
+    callToStart = () => {
     let startPlay = confirm('Do u want to play a game?');
     if (startPlay) {
         startGame();
     } else {
         console.log('U did not become a millionaire');
+        window.location.reload();
     }
 };
 
 continueGame = (startPrize, startPrizes, attempts, limit) => {
     let userApprove = confirm('Do u want to continue a game?');
+    console.log(userApprove);
     if(userApprove) {
         startGame(startPrize, startPrizes, attempts, limit);
     } else {
@@ -48,6 +50,7 @@ class GameController {
     }
     setNewLimit(limit) {
         this.limit = limit * 2;
+        console.log(this.limit);
     }
     getLimit() {
         return this.limit;
@@ -61,19 +64,19 @@ class GameController {
 
 function startGame (startPrize = 0, startPrizes = [10, 5, 2], attempts = 3, limit = 6) {
     let userProfile = new User();
-    let Game = new GameController(startPrizes, attempts);
+    let Game = new GameController(startPrizes, limit);
     let winNumber = Game.generateWinNumber();
     console.log(winNumber);
 
-    for(let i = 3; i > 0; i++) {
+    for(let i = 3; i > 0; i--) {
         if(userProfile.getUserChoice(Game.getLimit()) === winNumber && i > 0) {
             userProfile.setNewPrize(Game.getNewPrizes(i));
+            Game.setNewLimit(limit);
             continueGame(userProfile.getPrize(), Game.setNewPrizes(3), Game.resetAttempts(),
-                Game.setNewLimit(limit));
-        } else {
-            Game.tryAgain(userProfile.getPrize());
+                Game.getLimit());
         }
     }
+    Game.tryAgain(userProfile.getPrize());
 };
 
 callToStart();
