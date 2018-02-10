@@ -7,6 +7,7 @@ game = (limit, startPrize, userPrize) => {
                               Attempts left: ${i}
                               totalPrize: ${userPrize}$
                               Possible prize on current attempt: ${startPrize}$`);
+        console.log(userChoice)
         if(!userChoice) {
             break;
         } else userChoice = +userChoice;
@@ -25,9 +26,9 @@ game = (limit, startPrize, userPrize) => {
         startPrize *= 3;
         keepPlay = keepPlay
             ? game(limit, startPrize, userPrize)
-            : console.log(`Thank you for a game. Your prize is ${userPrize}`);
+            : console.log(`Thank you for a game. Your prize is ${userPrize}$`);
     } else {
-        console.log(`Thank you for a game. Your prize is ${userPrize}`);
+        console.log(`Thank you for a game. Your prize is ${userPrize}$`);
         play();
     }
 };
