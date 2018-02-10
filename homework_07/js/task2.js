@@ -1,6 +1,5 @@
 game = (limit, startPrize, userPrize) => {
-    let winNumber = Math.floor(Math.random() * 1);
-    console.log(winNumber);
+    let winNumber = Math.floor(Math.random() * limit);
     let userChoice;
     let win = false;
     for (let i = 3; i > 0; i--) {
