@@ -1,6 +1,6 @@
 let amounts = [];
 for(let i = 0; i < 2; i++) {
-    amounts.push(+(prompt('Amount:')));
+    amounts.push(parseFloat(prompt('Amount:')));
 }
 
 [EURO, USD] = amounts;
