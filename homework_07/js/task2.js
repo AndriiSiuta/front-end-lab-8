@@ -7,7 +7,6 @@ game = (limit, startPrize, userPrize) => {
                               Attempts left: ${i}
                               totalPrize: ${userPrize}$
                               Possible prize on current attempt: ${startPrize}$`);
-        console.log(userChoice)
         if(!userChoice) {
             break;
         } else userChoice = +userChoice;
