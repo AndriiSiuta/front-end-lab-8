@@ -1,7 +1,9 @@
 game = (limit, startPrize, userPrize) => {
     let winNumber = Math.floor(Math.random() * limit);
     let userChoice;
+    console.log(winNumber)
     let win = false;
+    let gamePrize = startPrize;
     for (let i = 3; i > 0; i--) {
         userChoice = prompt(`Choose a number in range [0: ${limit - 1}]
                               Attempts left: ${i}
@@ -22,9 +24,9 @@ game = (limit, startPrize, userPrize) => {
     if(win) {
         let keepPlay = confirm(`Do u want to continue a game`);
         limit = (limit * 2) - 1;
-        startPrize *= 3;
+        gamePrize *= 3;
         keepPlay = keepPlay
-            ? game(limit, startPrize, userPrize)
+            ? game(limit, gamePrize, userPrize)
             : console.log(`Thank you for a game. Your prize is ${userPrize}$`);
     } else {
         console.log(`Thank you for a game. Your prize is ${userPrize}$`);
