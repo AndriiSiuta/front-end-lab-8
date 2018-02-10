@@ -1,6 +1,6 @@
 const sides = [];
 for (let i = 0; i < 3; i++) {
-    sides.push(+(prompt(`Side ${i}`)));
+    sides.push(parseFloat(prompt(`Side ${i}`)));
 }
 [a, b, c] = sides;
 
