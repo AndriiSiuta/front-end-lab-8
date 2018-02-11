@@ -1,4 +1,4 @@
-let N = parseInt(prompt('Enter natural number N (0 < N <=20):'));
+let N = parseFloat(prompt('Enter natural number N (0 < N <=20):'));
 pyramid = (N) => {
     [SPACE_COUNT, PYRAMID, elemCount] = [N - 1, '', 1];
     for(let i = 0; i < N; i++) {
