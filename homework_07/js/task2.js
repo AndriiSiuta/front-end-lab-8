@@ -7,14 +7,10 @@ if(startPlay) {
     do {
         startPlay = false;
         let winNumber = Math.floor(Math.random() * limit);
-        console.log(winNumber);
         let userChoice;
         let win = false;
         for(let i = 3; i > 0; i--) {
-            userChoice = prompt(`Choose a number in range [0: ${limit - 1}]
-                                 Attempts left: ${i}
-                                 totalPrize: ${userPrize}$
-                                 Possible prize on current attempt: ${startPrize}$`);
+            userChoice = prompt(`Choose a number in range [0: ${limit - 1}]\nAttempts left: ${i}\nTotalPrize: ${userPrize}$\nPossible prize on current attempt: ${startPrize}$`);
             if(!userChoice) {
                 startPrize = Math.floor(startPrize / 2);
                 continue;
