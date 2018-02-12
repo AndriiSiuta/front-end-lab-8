@@ -27,14 +27,15 @@ game = (limit, startPrize, userPrize) => {
         keepPlay = keepPlay
             ? game(limit, gamePrize, userPrize)
             : console.log(`Thank you for a game. Your prize is ${userPrize}$`);
+        play('again');
     } else {
         console.log(`Thank you for a game. Your prize is ${userPrize}$`);
-        play();
+        play('again');
     }
 };
 
-play = () => {
-    let startPlay = confirm('Do u want to play a game?');
+play = (playAgain = 'game') => {
+    let startPlay = confirm(`Do u want to play ${playAgain}`);
     if (startPlay) {
         let limit = 6;
         let userPrize = 0;
