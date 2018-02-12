@@ -1,6 +1,7 @@
 game = (limit, startPrize, userPrize) => {
     let winNumber = Math.floor(Math.random() * limit);
     let userChoice;
+    console.log(winNumber)
     let win = false;
     let gamePrize = startPrize;
     for (let i = 3; i > 0; i--) {
@@ -35,13 +36,21 @@ game = (limit, startPrize, userPrize) => {
 };
 
 play = (playAgain = 'game') => {
-    let startPlay = confirm(`Do u want to play ${playAgain}`);
-    if (startPlay) {
-        let limit = 6;
-        let userPrize = 0;
-        let startPrize = 10;
-        game(limit, startPrize, userPrize);
-    } else console.log('U did not become a millionaire');
+    let limit = 6;
+    let userPrize = 0;
+    let startPrize = 10;
+    let startPlay;
+    if(playAgain == 'game') {
+        startPlay = confirm(`Do u want to play a game?`);
+        if (startPlay) {
+            game(limit, startPrize, userPrize);
+        } else console.log('U did not become a millionaire');
+    } else if(playAgain == 'again') {
+        startPlay = confirm(`Do u want to play again?`);
+        if(startPlay) {
+            game(limit, startPrize, userPrize);
+        }
+    }
 };
 
 play();
