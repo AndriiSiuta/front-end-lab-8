@@ -14,4 +14,4 @@ pyramid = (N) => {
     console.log(PYRAMID);
 };
 
-N = (Number.isInteger(N) && !Number.isNaN(N) && (N > 0 && N <= 20)) ? pyramid(N) : console.warn('Incorrect!');
+N = (Number.isInteger(N) && !Number.isNaN(N) && (N > 0 && N <= 20)) ? pyramid(N) : console.error('Incorrect!');
