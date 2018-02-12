@@ -1,12 +1,11 @@
 let startPlay = confirm('Do u want to play a game?');
 if(startPlay) {
-    let limit = 6;
-    let userPrize = 0;
-    let startPrize = 10;
+    [limit, userPrize, startPrize] = [6, 0, 10];
     let gamePrize = startPrize;
     do {
         let winNumber = Math.floor(Math.random() * limit);
         let userChoice;
+        console.log(winNumber)
         let win = false;
         for(let i = 3; i > 0; i--) {
             userChoice = prompt(`Choose a number in range [0: ${limit - 1}]\nAttempts left: ${i}\nTotalPrize: ${userPrize}$\nPossible prize on current attempt: ${startPrize}$`);
