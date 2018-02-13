@@ -1,11 +1,8 @@
 let startPlay = confirm('Do u want to play a game?');
 if(startPlay) {
-    let limit = 6;
-    let userPrize = 0;
-    let startPrize = 10;
+    [limit, userPrize, startPrize] = [6, 0, 10];
     let gamePrize = startPrize;
     do {
-        startPlay = false;
         let winNumber = Math.floor(Math.random() * limit);
         let userChoice;
         let win = false;
@@ -25,15 +22,13 @@ if(startPlay) {
         }
         if(win) {
             startPlay = confirm(`Do u want to continue a game`);
-            if(startPlay) {
+            if (startPlay) {
                 limit = (limit * 2) - 1;
                 gamePrize *= 3;
                 startPrize = gamePrize;
-            } else {
-                console.log(`Thank u for a game. Your prize is ${userPrize}$`);
-                startPlay = confirm(`Do u want to play again?`);
             }
-        } else {
+        }
+        if(!win || !startPlay) {
             console.log(`Thank u for a game. Your prize is ${userPrize}$ `);
             startPlay = confirm(`Do u want to play again?`);
         }
