@@ -1,8 +1,7 @@
-//toDo
-getClosestToZero = () => {
-  let result;
+function getClosestToZero () {
+  let resultNumber = Math.abs(arguments[0] - 0);
   for(let i = 0, len = arguments.length; i < len; i++) {
+    if(Math.abs(arguments[i] - 0) < resultNumber) resultNumber = arguments[i];
   }
-};
-
-console.log(getClosestToZero(9, 5, -4, -9));
+  return resultNumber;
+}
