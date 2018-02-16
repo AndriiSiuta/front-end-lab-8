@@ -9,6 +9,3 @@ cypherPhrase = (obj, str) => {
         return el;
     }).join('');
 };
-
-let charactersMap = {a: `o`, c: `d`, t: `g`}
-console.log(cypherPhrase(charactersMap, `kitty cat`)); // -> “kiggy dog”
