@@ -11,4 +11,4 @@ cypherPhrase = (obj, str) => {
 };
 
 let charactersMap = {a: `o`, c: `d`, t: `g`}
-cypherPhrase(charactersMap, `kitty cat`); // -> “kiggy dog”
+console.log(cypherPhrase(charactersMap, `kitty cat`)); // -> “kiggy dog”

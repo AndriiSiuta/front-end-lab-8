@@ -5,6 +5,3 @@ decypherPhrase = (obj, str) => {
     });
     return cypherPhrase(newObj, str);
 };
-
-let map = {a: `o`, c: `d`, t: `g`}
-console.log(decypherPhrase(map, `kiggy dog`)); // -> “kitty cat”

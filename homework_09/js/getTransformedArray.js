@@ -9,5 +9,3 @@ getTransformedArray = (array, callback) => {
     });
     return result;
 };
-
-//getTransformedArray([1,2,3], decrement)

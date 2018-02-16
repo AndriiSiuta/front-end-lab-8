@@ -11,4 +11,3 @@ getFilteredArray = (array, callback) => {
     });
     return result;
 };
-//getFilteredArray([1,7,20], predicateFunc);
