@@ -38,30 +38,23 @@ function fighter(warrior) {
         loses: 0
     };
 
-    function getStats() {
-        return { name, attack, hp } = warrior
-    }
+    getStats = () => warrior;
 
-    function block() {
-        return Math.random() >= 0.5;
-    }
+    block = () => Math.random() >= 0.5;
 
-    function fight(defender) {
-        let takeDamage = false;
+    fight = (defender) => {
         if(block()) {
-            return takeDamage;
+            return false;
         } else {
-
             defender.getStats().hp -= this.getStats().attack;
             if(defender.getStats().hp === 0) {
                 this.historyResult.wins += 1;
                 defender.historyResult.loses += 1;
             }
+            return true;
         }
 
-    }
-
-
+    };
 
     return {
         historyResult,
@@ -71,7 +64,6 @@ function fighter(warrior) {
         fight,
     }
 }
-
 
 /**
  * The following code must be valid after implementation!
