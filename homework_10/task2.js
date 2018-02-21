@@ -33,38 +33,42 @@ function showResult(fighter) {
 
 
 function fighter(warrior) {
-    const stats = {
+    const historyResult = {
         wins: 0,
         loses: 0
     };
-
-    function getCombatHistory() {
-
-        return { wins, loses } = stats;
-    }
 
     function getStats() {
         return { name, attack, hp } = warrior
     }
 
-    function fight(defender) {
-        if (this.getStats().attack >= defender.getStats().hp) {
-            stats.wins += 1;
-
-            defender.stats.loses+=1;
-            defender.getStats().hp -= this.getStats().attack;
-        }
-        if(this.getStats().attack < defender.getStats().hp) {
-            defender.getStats().hp -= this.getStats().attack;
-        }
+    function block() {
+        return Math.random() >= 0.5;
     }
 
+    function fight(defender) {
+        let takeDamage = false;
+        if(block()) {
+            return takeDamage;
+        } else {
+
+            defender.getStats().hp -= this.getStats().attack;
+            if(defender.getStats().hp === 0) {
+                this.historyResult.wins += 1;
+                defender.historyResult.loses += 1;
+            }
+        }
+
+    }
+
+
+
     return {
-        getName: () => this.name,
-        getCombatHistory,
+        historyResult,
+        getName: () => warrior.name,
+        getCombatHistory: function () {  return historyResult },
         getStats,
         fight,
-        stats
     }
 }
 
