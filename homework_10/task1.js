@@ -1,9 +1,16 @@
 /*
   Your debounce function goes here */
 function debounce(callback, time) {
-    callback()
+    let timeout = null;
+    return function() {
+        const called = () => callback.apply(this);
+        if(timeout) {
+            clearTimeout(timeout)
+        }
+        debugger;
+        timeout = setTimeout(called, time);
+    }
 }
-
 
 // Example
 
@@ -21,12 +28,12 @@ function printIteratorValue() {
 
 let increaseIterator = debounce(increaseIteratorBy1, 1000);
 
-// increaseIterator();
-// increaseIterator();
-// increaseIterator();
-// increaseIterator();
-// increaseIterator();
-// increaseIterator();
-// increaseIterator();
-// increaseIterator();
+increaseIterator();
+increaseIterator();
+increaseIterator();
+increaseIterator();
+increaseIterator();
+increaseIterator();
+increaseIterator();
+increaseIterator();
 increaseIterator(); // Should print 'Iterator value 2'
