@@ -5,9 +5,9 @@ function debounce(callback, time) {
     return function() {
         const called = () => callback.apply(this);
         if(timeout) {
-            clearTimeout(timeout)
+            clearTimeout(timeout);
+            timeout = null;
         }
-        debugger;
         timeout = setTimeout(called, time);
     }
 }
