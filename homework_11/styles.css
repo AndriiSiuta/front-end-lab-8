@@ -1,0 +1,8 @@
+* {
+    list-style-type: none;
+    font-size: 25px;
+}
+
+ul:nth-child(1) {
+    margin: 0;
+}
