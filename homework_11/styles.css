@@ -12,3 +12,7 @@ ul:nth-child(1) {
 span {
     margin-left: 10px;
 }
+
+.material-icons {
+    color: darkorange;
+}
