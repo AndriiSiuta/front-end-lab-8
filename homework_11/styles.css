@@ -1,8 +1,14 @@
 * {
     list-style-type: none;
     font-size: 25px;
+    font-style: Italic;
+    font-weight: normal;
 }
 
 ul:nth-child(1) {
     margin: 0;
+}
+
+span {
+    margin-left: 10px;
 }

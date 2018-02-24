@@ -1,31 +1,42 @@
-var rootNode = document.getElementById("root");
+let rootNode = document.getElementById("root");
 
-// Your code goes here
-console.log(`${JSON.stringify(structure, null, 2)}`);
 let createTree = (jsx) => {
-    const { folderStatus, title, children } = jsx;
-    let tagName, className;
+    const {folder, title, children} = jsx;
+    const listItem = document.createElement('li');
+    const row = document.createElement('h4');
+    const icon = document.createElement('i');
+    row.setAttribute('class', 'folder');
+    icon.setAttribute('class', 'material-icons');
+    icon.innerHTML = folder ? 'folder' : 'insert_drive_file';
+    const span = document.createElement('span');
+    span.innerHTML = title;
+    row.appendChild(icon);
+    row.appendChild(span);
+    listItem.appendChild(row);
 
-    if(folderStatus) {
-        [tagName, className] = ['ul', 'folder'];
-    } else {
-        [tagName, className] = ['li', 'file']
+    if (!children && folder) {
+        const lastUl = document.createElement('ul');
+        const lastItem = document.createElement('li');
+        const lastRow = document.createElement('h4');
+        lastRow.innerHTML = 'Folder is empty';
+        lastItem.appendChild(lastRow);
+        lastUl.appendChild(lastItem);
+        listItem.appendChild(lastUl);
     }
 
-    const domElement = document.createElement(tagName);
-    domElement.setAttribute('class', className);
-
-    domElement.appendChild(title);
-
+    let moveNext = document.createElement('ul');
     if (children) {
-        children.forEach(child => {
-            domElement.appendChild(createTree(child));
+        listItem.appendChild(moveNext);
+        children.forEach(key => {
+            moveNext.appendChild(createTree(key));
         });
     }
 
-    return domElement;
+    return listItem;
 };
 
-const tree1 = createTree(structure[0]);
-// const tree2 = createTree(structure[1]);
-rootNode.appendChild(tree1);
+const container = document.createElement('ul');
+structure.forEach(key => {
+    container.appendChild(createTree(key));
+});
+rootNode.appendChild(container);
