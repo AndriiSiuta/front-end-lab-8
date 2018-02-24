@@ -46,7 +46,6 @@ function fighter(warrior) {
 
     function fight (defender) {
         if(block()) {
-            console.log('here');
             return false;
         } else {
             defender.getStats().hp -= this.getStats().attack;
