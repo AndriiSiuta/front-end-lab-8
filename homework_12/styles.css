@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    margin-left: 15px;
+    width: 1200px;
+    display: block;
+}
+
+.flex-container {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.thumbnails {}
+
+.tank-model {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.tank-picture {
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
