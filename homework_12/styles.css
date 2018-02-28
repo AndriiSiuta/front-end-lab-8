@@ -17,7 +17,7 @@ body {
 }
 
 .flex-container {
-    width: 1700px;
+    width: 1800px;
     flex-direction: row;
     display: flex;
     justify-content: flex-start;
@@ -39,7 +39,9 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
+    text-align: left;
     float: left;
+    width: 220px;
 }
 
 .tank-flag {

@@ -1,4 +1,3 @@
-// Your code goes here
 const root = document.getElementById('root');
 
 const container = document.createElement('div');
@@ -30,8 +29,11 @@ function renderAllList() {
         countryFlag.src = `images/countries/${key.country}.png`;
         tankPicture.src = key.preview;
 
+        countryFlag.title = `${key.country}`;
+
         const tankModel = document.createElement('h4');
         tankModel.setAttribute('class', 'tank-model');
+        tankModel.title = key.model;
         tankModel.innerHTML = key.model;
         flexItem.appendChild(tankModel);
         flexContainer.appendChild(flexItem);
@@ -48,10 +50,10 @@ function renderDetails(tank) {
     return ` <div class="tank-details">
             <div class="left-column">
               <h1>
-                <img class="detail-flag" src="images/countries/${tank.country}.png"/>${tank.model} (${tank.level})
+                <img class="detail-flag" src="images/countries/${tank.country}.png" title="${tank.country}"/>${tank.model} (level ${tank.level})
               </h1>
                <span class="preview">Preview</span>
-               <img class="tank-details-flag" src="${tank.preview}" alt="">
+               <img class="tank-details-flag" src="${tank.preview}">
                <span class="back-link">Back to list view</span>
                </div>
                
@@ -124,3 +126,11 @@ function tankDetail() {
 root.appendChild(renderAllList());
 window.onhashchange = tankDetail;
 
+const styleSheet = document.styleSheets[0];
+const hoverColor = ['#88896E', '#8F927F', '#414241', '#ABB1B2', '#89816B', '#8E8877', '#999082', '#90887B'];
+for(let i = 0; i < tanks.length; i++) {
+        let rule = `.flex-item:nth-child(${i+1}):hover {
+        background: ${hoverColor[i]};
+        }`;
+    styleSheet.insertRule(rule, i);
+}
