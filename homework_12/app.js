@@ -30,7 +30,7 @@ function renderAllList() {
         countryFlag.src = `images/countries/${key.country}.png`;
         tankPicture.src = key.preview;
 
-        const tankModel = document.createElement('span');
+        const tankModel = document.createElement('h4');
         tankModel.setAttribute('class', 'tank-model');
         tankModel.innerHTML = key.model;
         flexItem.appendChild(tankModel);
@@ -44,21 +44,83 @@ function renderAllList() {
 }
 
 function renderDetails(tank) {
-    //change class and rerender html with current tank
+    const details = tank.details;
+    return ` <div class="tank-details">
+            <div class="left-column">
+              <h1>
+                <img class="detail-flag" src="images/countries/${tank.country}.png"/>${tank.model} (${tank.level})
+              </h1>
+               <span class="preview">Preview</span>
+               <img class="tank-details-flag" src="${tank.preview}" alt="">
+               <span class="back-link">Back to list view</span>
+               </div>
+               
+               <div class="right-column">
+               <h1 class="preTable">Characteristic</h1>
+               <table>
+                <tr>
+                    <th>
+                        damage
+                    </th>
+                    <th>
+                        ${details.damage}
+                    </th>
+                </tr>
+                
+                 <tr>
+                    <th>
+                        breoning
+                    </th>
+                    <th>
+                        ${details.breoning}
+                    </th>
+                </tr>
+                
+                 <tr>
+                    <th>
+                        attack speed
+                    </th>
+                    <th>
+                        ${details.attack_speed}
+                    </th>
+                </tr>
+                
+                 <tr>
+                    <th>
+                        time of targeting
+                    </th>
+                    <th>
+                        ${details.time_of_targeting}
+                    </th>
+                </tr>
+                
+                  <tr>
+                    <th>
+                        ammunition
+                    </th>
+                    <th>
+                        ${details.ammunition}
+                    </th>
+                </tr>
+               </table>
+              </div>
+           </div>`
 }
 
 function tankDetail() {
-    //render tank details
     let model = location.hash.slice(1);
     tanks.forEach(el => {
-        console.log(el.model);
         if (el.model === model) {
-            renderDetails(el);
+            root.innerHTML = renderDetails(el);
         }
+    });
+    const backLink = document.getElementsByClassName('back-link');
+    backLink[0].addEventListener('click', () => {
+        location.hash = '';
+        window.history.go();
     });
 }
 
 root.appendChild(renderAllList());
 window.onhashchange = tankDetail;
-
 
