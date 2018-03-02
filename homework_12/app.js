@@ -4,6 +4,7 @@ const container = document.createElement('div');
 container.setAttribute('class', 'thumbnails');
 
 function renderAllList() {
+    location.hash = '';
     const heading = document.createElement('h1');
     const main = root.appendChild(container);
     main.appendChild(heading);
